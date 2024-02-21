@@ -14,10 +14,17 @@ type CoinDetails struct {
 	Username string
 	Currency string
 }
+type UserDetails struct {
+	Username string
+	FullName string
+	Country  string
+	Email    string
+}
 
 type DatabaseInterface interface {
 	GetUserLoginDetails(username string) *LoginDetails
 	GetUserCoins(username string) *CoinDetails
+	GetUserDetails(username string) *UserDetails
 	SetupDatabase() error
 }
 
