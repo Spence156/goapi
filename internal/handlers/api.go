@@ -16,5 +16,7 @@ func Handler(r *chi.Mux) {
 		router.Use(middleware.Authorization) // Enforces Authentication using the internal/middleware/authorization.go
 
 		router.Get("/coins", GetCoinBalance) // Produces a API endpoint which calls the internal/handlers/GetCoinBalance
+
+		router.Get("/user", GetUserDetails) // Produces a API endpoint which calls the internal/handlers/GetUsers
 	})
 }

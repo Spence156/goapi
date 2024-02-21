@@ -10,6 +10,10 @@ type CoinBalanceParams struct {
 	Username string
 }
 
+type UserDetailsParams struct {
+	Username string
+}
+
 // Coin Balance Response
 type CoinBalanceResponse struct {
 	// Success Code, Usually 200
@@ -28,7 +32,16 @@ type UserResponse struct {
 	Code int
 
 	// Username
-	User string
+	Username string
+
+	// User Full Name
+	FullName string
+
+	// User Country
+	Country string
+
+	// User Email
+	Email string
 }
 
 // Error Response (Response returned when an error occurs)
